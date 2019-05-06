@@ -7,7 +7,7 @@ class App
     static function getDatabase()
     {
         if (!self::$db) {
-            self::$db = new Database('root', 'troiswa', 'projet');
+            self::$db = new Database('******', '*******', 'projet');
         }
         return self::$db;
     }

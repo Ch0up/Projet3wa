@@ -1,5 +1,7 @@
 <?php
 
+namespace JKosacki;
+
 class App
 {
     static $db = null;
@@ -7,7 +9,7 @@ class App
     static function getDatabase()
     {
         if (!self::$db) {
-            self::$db = new Database('******', '********', 'projet');
+            self::$db = new Database('root', 'troiswa', 'projet');
         }
         return self::$db;
     }

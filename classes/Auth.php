@@ -1,5 +1,7 @@
 <?php
 
+namespace JKosacki;
+
 class Auth
 {
     private $session;

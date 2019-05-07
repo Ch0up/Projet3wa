@@ -1,5 +1,7 @@
 <?php
 
+namespace JKosacki;
+
 class Form
 {
     private $data = [];

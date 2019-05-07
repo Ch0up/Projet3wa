@@ -69,21 +69,20 @@ $(document).ready(() => {
 });
 
 // active link when scroll
-window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
-    let mainNavLinks = document.querySelectorAll("nav ul li a");
-
-    mainNavLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
-
-
-        if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-        ) {
-            link.classList.add("active-links");
-        } else {
-            link.classList.remove("active-links");
-        }
-    });
-});
+// window.addEventListener("scroll", event => {
+//     let fromTop = window.scrollY;
+//     let mainNavLinks = document.querySelectorAll("nav ul li a");
+//
+//     mainNavLinks.forEach(link => {
+//         let section = document.querySelector(link.hash);
+//
+//         if (
+//             section.offsetTop <= fromTop &&
+//             section.offsetTop + section.offsetHeight > fromTop
+//         ) {
+//             link.classList.add("active-links");
+//         } else {
+//             link.classList.remove("active-links");
+//         }
+//     });
+// });

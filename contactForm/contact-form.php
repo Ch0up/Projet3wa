@@ -1,4 +1,8 @@
 <?php
+
+use \JKosacki\Autoloader;
+use \JKosacki\Validator;
+
 require '../classes/autoloader.php';
 Autoloader::register();
 $errors = [];
@@ -14,11 +18,11 @@ $errors = $validator->getErrors();
 if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
     $_SESSION['inputs'] = $_POST;
-    header('Location: ../index.php');
+    header('Location: ../loginHome.php');
 } else {
     $_SESSION['success'] = 1;
     $headers = 'FROM: ' . $_POST['email'];
     mail('joris.kosacki@hotmail.fr', 'Message de : ' . $_POST['nom'] . ' ' . $_POST['prénom'], $_POST['message'],
         $headers);
-    header('Location: ../index.php');
+    header('Location: ../loginHome.php');
 }

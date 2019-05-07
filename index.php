@@ -1,4 +1,9 @@
 <?php
+
+use \JKosacki\Autoloader;
+use \JKosacki\App;
+use \JKosacki\Form;
+
 require_once 'classes/Autoloader.php';
 Autoloader::register();
 App::getAuth()->restrict();

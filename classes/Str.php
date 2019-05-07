@@ -1,5 +1,7 @@
 <?php
 
+namespace JKosacki;
+
 class Str
 {
     static function random($length)

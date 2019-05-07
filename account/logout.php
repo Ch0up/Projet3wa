@@ -1,4 +1,9 @@
 <?php
+
+use \JKosacki\Autoloader;
+use \JKosacki\App;
+use \JKosacki\Session;
+
 require '../classes/autoloader.php';
 Autoloader::register();
 App::getAuth()->logout();

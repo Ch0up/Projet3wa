@@ -1,4 +1,11 @@
 <?php
+
+use \JKosacki\Autoloader;
+use \JKosacki\App;
+use \JKosacki\Session;
+use \JKosacki\Validator;
+
+
 require '../classes/autoloader.php';
 Autoloader::register();
 
@@ -30,7 +37,7 @@ if (!empty($_POST)) {
     }
 }
 ?>
-<?php require 'index.php'; ?>
+<?php require 'loginHome.php'; ?>
 
 <div class="wrapper">
     <div class="container">

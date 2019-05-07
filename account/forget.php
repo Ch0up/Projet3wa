@@ -1,11 +1,16 @@
 <?php
+
+use \JKosacki\Autoloader;
+use \JKosacki\App;
+use \JKosacki\Session;
+
 require '../classes/autoloader.php';
 Autoloader::register();
 if (!empty($_POST) && !empty($_POST['email'])) {
     $db = App::getDatabase();
     $auth = App::getAuth();
     $session = Session::getInstance();
-    if($auth->resetPassword($db, $_POST['email'])) {
+    if ($auth->resetPassword($db, $_POST['email'])) {
         $session->setFlash('success', "Les instructions du rappel de mot de passe vous ont été envoyées par email");
         App::redirect('login.php');
     } else {
@@ -15,7 +20,7 @@ if (!empty($_POST) && !empty($_POST['email'])) {
 }
 ?>
 
-<?php require 'index.php'; ?>
+<?php require 'loginHome.php'; ?>
 
 <div class="wrapper">
     <div class="container">

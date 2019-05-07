@@ -1,5 +1,7 @@
 <?php
 
+namespace JKosacki;
+
 class Session
 {
     static $instance;

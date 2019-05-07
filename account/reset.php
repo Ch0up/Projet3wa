@@ -1,4 +1,11 @@
 <?php
+
+use \JKosacki\Autoloader;
+use \JKosacki\App;
+use \JKosacki\Session;
+use \JKosacki\Validator;
+
+
 require '../classes/autoloader.php';
 Autoloader::register();
 if (isset($_GET['id']) && isset($_GET['token'])) {
@@ -26,7 +33,7 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
     App::redirect('login.php');
 }
 ?>
-<?php require 'index.php'; ?>
+<?php require 'loginHome.php'; ?>
 
 <div class="login-page">
     <div class="form">

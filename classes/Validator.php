@@ -1,10 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Choup
- * Date: 04/04/2019
- * Time: 20:32
- */
+
+namespace JKosacki;
 
 class Validator
 {

@@ -2,7 +2,7 @@
 
 namespace JKosacki;
 
-class Auth
+class Authentification
 {
     private $session;
 

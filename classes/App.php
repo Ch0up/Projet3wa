@@ -16,7 +16,7 @@ class App
 
     static function getAuth()
     {
-        return new Auth(Session::getInstance());
+        return new Authentification(Session::getInstance());
     }
 
     static function redirect($page)

@@ -12,7 +12,7 @@ App::getAuth()->restrict();
     <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>MonProjet</title>
+        <title>Mon Projet</title>
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -28,7 +28,7 @@ App::getAuth()->restrict();
     <header>
         <nav>
             <div class="logo">
-                <h4>The nav logo</h4>
+                <h4>Joris Kosacki</h4>
             </div>
             <ul class="nav-links">
                 <li><a href="#about" class="scroll">À Propos</a></li>

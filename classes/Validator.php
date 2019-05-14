@@ -11,6 +11,7 @@ class Validator
     {
         $this->data = $data;
     }
+
     /*
     //
     //
@@ -24,7 +25,8 @@ class Validator
         if (!isset($this->data[$field])) {
             return null;
         }
-        return $this->data[$field];
+        $data = $this->data[$field];
+        return $data;
     }
 
     public function isAlpha($field, $errorMsg)

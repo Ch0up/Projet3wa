@@ -6,7 +6,7 @@ use \JKosacki\Session;
 use \JKosacki\Validator;
 
 
-require '../classes/autoloader.php';
+require '../classes/Autoloader.php';
 Autoloader::register();
 if (isset($_GET['id']) && isset($_GET['token'])) {
     $auth = App::getAuth();

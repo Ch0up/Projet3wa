@@ -6,7 +6,7 @@ use \JKosacki\Session;
 use \JKosacki\Validator;
 
 
-require '../classes/autoloader.php';
+require '../classes/Autoloader.php';
 Autoloader::register();
 
 if (!empty($_POST)) {

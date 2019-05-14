@@ -1,14 +1,17 @@
 'use strict';
 
 // Fonction pour ouvrir le menu responsive
-const navSlide = () => {
+function navSlide() {
     const burger = document.querySelector('.nav-burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
+    let sideBarOpened = false;
 
     burger.addEventListener('click', () => {
         // Toggle nav
         nav.classList.toggle('nav-active');
+        // Burger animation
+        burger.classList.toggle('toggle');
 
         // Animate links
         navLinks.forEach((link, index) => {
@@ -18,10 +21,25 @@ const navSlide = () => {
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.4}s`;
             }
         });
-        // Burger animation
-        burger.classList.toggle('toggle');
+        sideBarOpened = true;
+
+        // Close nav side
+        nav.addEventListener('click', () => {
+            if (sideBarOpened) {
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.4}s`;
+                    }
+                });
+                sideBarOpened = false;
+            }
+        });
     });
-};
+}
 
 navSlide();
 
@@ -54,35 +72,12 @@ $(document).ready(() => {
     })
 });
 
+// Smooth scrolling quand on clique sur les link du nav ou du footer
+$('.scroll').on('click', onClickGoArticle);
+$('.linksBottom a').on('click', onClickGoArticle);
 
-
-$(document).ready(() => {
-    let scrollLink = $('.scroll');
-
-    // Smooth scrolling
-    scrollLink.click(function (e) {
-        e.preventDefault();
-        $('body,html').animate({
-            scrollTop: $(this.hash).offset().top
-        }, 1000);
-    });
-});
-
-// active link when scroll
-// window.addEventListener("scroll", event => {
-//     let fromTop = window.scrollY;
-//     let mainNavLinks = document.querySelectorAll("nav ul li a");
-//
-//     mainNavLinks.forEach(link => {
-//         let section = document.querySelector(link.hash);
-//
-//         if (
-//             section.offsetTop <= fromTop &&
-//             section.offsetTop + section.offsetHeight > fromTop
-//         ) {
-//             link.classList.add("active-links");
-//         } else {
-//             link.classList.remove("active-links");
-//         }
-//     });
-// });
+function onClickGoArticle() {
+    $('body,html').animate({
+        scrollTop: $(this.hash).offset().top
+    }, 1000);
+}

@@ -4,7 +4,7 @@ use \JKosacki\Autoloader;
 use \JKosacki\App;
 use \JKosacki\Session;
 
-require '../classes/autoloader.php';
+require '../classes/Autoloader.php';
 Autoloader::register();
 if (!empty($_POST) && !empty($_POST['email'])) {
     $db = App::getDatabase();

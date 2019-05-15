@@ -27,8 +27,10 @@ class Authentification
             $token
         ]);
         $user_id = $db->lastInsertId();
+        $headers = 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
         mail($email, 'Confirmation de votre compte',
-            "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttp://localhost/ProjetPersoDev/projet3wa/Projet/application/account/confirm.php?id=$user_id&token=$token");
+            "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttp://localhost/ProjetPersoDev/projet3wa/Projet/application/account/confirm.php?id=$user_id&token=$token",
+            $headers);
     }
 
     public function confirm($db, $user_id, $token)
@@ -117,12 +119,15 @@ class Authentification
 
     public function resetPassword($db, $email)
     {
-        $user = $db->query('SELECT * FROM users WHERE email = :email AND confirmed_at IS NOT NULL', [$email])->fetch();
+        $user = $db->query('SELECT * FROM users WHERE email = :email AND confirmed_at IS NOT NULL',
+            ['email' => $email])->fetch();
         if ($user) {
             $reset_token = Str::random(60);
             $db->query('UPDATE users SET reset_token = ?, reset_at = NOW() WHERE id = ?', [$reset_token, $user->id]);
+            $headers = 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
             mail($_POST['email'], 'Réinitialisation de votre mot de passe',
-                "Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien\n\nhttp://localhost/ProjetPersoDev/projet3wa/Projet/application/account/reset.php?id={$user->id}&token=$reset_token");
+                "Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien\n\nhttp://localhost/ProjetPersoDev/projet3wa/Projet/application/account/reset.php?id={$user->id}&token=$reset_token",
+                $headers);
             return $user;
         }
         return false;

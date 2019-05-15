@@ -5,12 +5,12 @@ use \JKosacki\App;
 use \JKosacki\Session;
 use \JKosacki\Validator;
 
-
 require '../classes/Autoloader.php';
 Autoloader::register();
 if (isset($_GET['id']) && isset($_GET['token'])) {
     $auth = App::getAuth();
     $db = App::getDatabase();
+    $session = Session::getInstance();
     $user = $auth->checkResetToken($db, $_GET['id'], $_GET['token']);
     if ($user) {
         if (!empty($_POST)) {
@@ -21,8 +21,11 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
                 $db->query('UPDATE users SET password = ?, reset_at = NULL, reset_token = NULL WHERE id = ?',
                     [$password, $_GET['id']]);
                 $auth->connect($user);
-                Session::getInstance()->setFlash('success', "Votre mot de passe a bien été modifié");
+                $session->setFlash('success', "Votre mot de passe a bien été modifié");
                 App::redirect('login.php');
+            }
+            else {
+                $session->setFlash('danger', "Les mots de passe ne correspondent pas");
             }
         }
     } else {
@@ -35,8 +38,8 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
 ?>
 <?php require 'loginHome.php'; ?>
 
-<div class="login-page">
-    <div class="form">
+<div class="wrapper">
+    <div class="container">
         <h2>Réinitialisation</h2>
         <?php if (isset($_SESSION['flash'])): ?>
             <?php foreach ($_SESSION['flash'] as $type => $message): ?>
@@ -52,4 +55,16 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
             <button type="submit">Réinitialiser</button>
         </form>
     </div>
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 </div>

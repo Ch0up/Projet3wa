@@ -2,7 +2,6 @@
 
 namespace JKosacki;
 
-
 class Database
 {
     private $pdo;

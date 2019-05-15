@@ -284,14 +284,17 @@ App::getAuth()->restrict();
             <a href="#contact">Contact</a>
         </div>
         <div class="social-network-icons">
-            <a target="_blank" href="https://www.facebook.com">
+            <a target="_blank" href="https://www.facebook.com/joris.kosacki">
                 <i class="transfo fab fa-facebook-square"></i>
             </a>
-            <a target="_blank" href="https://www.linkedin.com/feed/">
+            <a target="_blank" href="https://www.linkedin.com/in/joris-kosacki-669b1515b/">
                 <i class="transfo fab fa-linkedin"></i>
             </a>
             <a target="_blank" href="https://twitter.com/">
                 <i class="transfo fab fa-twitter-square"></i>
+            </a>
+            <a target="_blank" href="https://github.com/Ch0up">
+                <i class="transfo fab fa-github-square"></i>
             </a>
         </div>
         <p>Portfolio développeur web full-stack © 2018 Joris Kosacki - mentions légales</p>

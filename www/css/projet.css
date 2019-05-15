@@ -649,6 +649,7 @@ footer p:last-of-type {
         align-items: center;
         transform: translateX(0);
         transition: 1s;
+        padding: 0;
     }
 
     .nav-links li {

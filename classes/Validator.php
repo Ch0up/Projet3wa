@@ -2,6 +2,7 @@
 
 namespace JKosacki;
 
+
 class Validator
 {
     private $data = [];
@@ -25,8 +26,7 @@ class Validator
         if (!isset($this->data[$field])) {
             return null;
         }
-        $data = $this->data[$field];
-        return $data;
+        return $this->data[$field];
     }
 
     public function isAlpha($field, $errorMsg)

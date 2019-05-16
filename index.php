@@ -181,7 +181,8 @@ App::getAuth()->restrict();
         <article class="creation clearfix" id="creation">
             <h2>Réalisations</h2>
             <div class="rectangle-orange">
-                <div class="description-creation clearfix">
+                <div class="description-creation description-creation-odd clearfix">
+                    <h3>Cup of Tea :</h3>
                     <a href="www/images/cupoftea.jpg" data-lightbox="myproject" data-title="cupoftea"><img
                                 src="www/images/cupoftea-small.jpg" title="cupoftea" alt="cupoftea"
                                 width="150"
@@ -190,8 +191,15 @@ App::getAuth()->restrict();
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
                     </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt, dolore facilis
+                        laborum
+                        nobisnulla quam sit sunt unde voluptas? Alias aperiam eligendi optio pariatur quas, quisquam
+                        soluta
+                        veritatis
+                        voluptatem!</p>
                 </div>
-                <div class="description-creation clearfix">
+                <div class="description-creation description-creation-odd clearfix">
+                    <h3>John Doe :</h3>
                     <a href="www/images/johndoe.jpg" data-lightbox="myproject" data-title="johnDoe"><img
                                 src="www/images/johndoe-small.jpg" title="johndoe" alt="johndoe"
                                 height="150"
@@ -200,8 +208,15 @@ App::getAuth()->restrict();
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
                     </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt, dolore facilis
+                        laborum
+                        nobisnulla quam sit sunt unde voluptas? Alias aperiam eligendi optio pariatur quas, quisquam
+                        soluta
+                        veritatis
+                        voluptatem!</p>
                 </div>
-                <div class="description-creation clearfix">
+                <div class="description-creation description-creation-odd clearfix">
+                    <h3>CreaSoul :</h3>
                     <a href="www/images/creasoul.png" data-lightbox="myproject" data-title="creaSoul"><img
                                 src="www/images/creasoul-small.png" title="creasoul" alt="creasoul"
                                 width="150"
@@ -210,8 +225,15 @@ App::getAuth()->restrict();
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
                     </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt, dolore facilis
+                        laborum
+                        nobisnulla quam sit sunt unde voluptas? Alias aperiam eligendi optio pariatur quas, quisquam
+                        soluta
+                        veritatis
+                        voluptatem!</p>
                 </div>
-                <div class="description-creation clearfix">
+                <div class="description-creation description-creation-odd clearfix">
+                    <h3>Wolfgang :</h3>
                     <a href="www/images/wolfgang.png" data-lightbox="myproject" data-title="wolfgang"><img
                                 src="www/images/wolfgang-small.png" title="wolfgang" alt="wolfgang"
                                 width="150"
@@ -220,8 +242,15 @@ App::getAuth()->restrict();
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
                     </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt, dolore facilis
+                        laborum
+                        nobisnulla quam sit sunt unde voluptas? Alias aperiam eligendi optio pariatur quas, quisquam
+                        soluta
+                        veritatis
+                        voluptatem!</p>
                 </div>
-                <div class="description-creation clearfix">
+                <div class="description-creation description-creation-odd clearfix">
+                    <h3>MindGeek :</h3>
                     <a href="www/images/mindgeek.jpg" data-lightbox="myproject" data-title="mindgeek"><img
                                 src="www/images/mindgeek-small.jpg" title="mindgeek" alt="mindgeek"
                                 width="150"
@@ -231,8 +260,8 @@ App::getAuth()->restrict();
                         vero? Consequatur, vero?
                     </p>
                 </div>
-
-                <div class="description-creation clearfix">
+                <div class="description-creation description-creation-odd clearfix">
+                    <h3>Restaurant :</h3>
                     <a href="www/images/restaurant-small.jpg" data-lightbox="myproject"
                        data-title="restaurant"><img
                                 src="www/images/restaurant-small.jpg" title="restaurant" alt="restaurant"
@@ -242,7 +271,8 @@ App::getAuth()->restrict();
                         deleniti, eaque enim facere facilis inventore laboriosam nemo obcaecati perspiciatis quasi, quod
                         sed sit soluta sunt voluptatibus?</p>
                 </div>
-                <div class="description-creation clearfix">
+                <div class="description-creation description-creation-odd clearfix">
+                    <h3>Ardoise Magique :</h3>
                     <a href="www/images/ardoise-small.jpg" data-lightbox="myproject"
                        data-title="ardoise"><img
                                 src="www/images/ardoise-small.jpg" title="ardoise" alt="ardoise"

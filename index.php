@@ -29,13 +29,13 @@ App::getAuth()->restrict();
     <header>
         <nav>
             <div class="logo">
-                <a href="#home"><h4>Joris Kosacki</h4></a>
+                <a href="#home" title="Home"><h4>Joris Kosacki</h4></a>
             </div>
             <ul class="nav-links">
-                <li><a href="#about" class="scroll">À Propos</a></li>
-                <li><a href="#skills" class="scroll">Compétences</a></li>
-                <li><a href="#creation" class="scroll">Réalisations</a></li>
-                <li><a href="#contact" class="scroll">Contact</a></li>
+                <li><a href="#about" class="scroll" title="À Propos">À Propos</a></li>
+                <li><a href="#skills" class="scroll" title="Compétences">Compétences</a></li>
+                <li><a href="#creation" class="scroll" title="Réalisations">Réalisations</a></li>
+                <li><a href="#contact" class="scroll" title="Contact">Contact</a></li>
                 <li>
                     <?php if (isset($_SESSION['auth'])): ?>
                         <a href="account/logout" title="See-you-soon"><i class="fas fa-door-open"></i></a>
@@ -290,22 +290,22 @@ App::getAuth()->restrict();
     </main>
     <footer>
         <div class="linksBottom">
-            <a href="#about">À Propos</a>
-            <a href="#skills">Compétences</a>
-            <a href="#creation">Réalisation</a>
-            <a href="#contact">Contact</a>
+            <a href="#about" title="À Propos">À Propos</a>
+            <a href="#skills" title="Compètences">Compétences</a>
+            <a href="#creation" title="Réalisation">Réalisation</a>
+            <a href="#contact" title="Contact">Contact</a>
         </div>
         <div class="social-network-icons">
-            <a target="_blank" href="https://www.facebook.com/joris.kosacki">
+            <a target="_blank" href="https://www.facebook.com/joris.kosacki" title="facebook">
                 <i class="transfo fab fa-facebook-square"></i>
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/joris-kosacki-669b1515b/">
+            <a target="_blank" href="https://www.linkedin.com/in/joris-kosacki-669b1515b/" title="linkedin">
                 <i class="transfo fab fa-linkedin"></i>
             </a>
-            <a target="_blank" href="https://twitter.com/">
+            <a target="_blank" href="https://twitter.com/" title="twitter">
                 <i class="transfo fab fa-twitter-square"></i>
             </a>
-            <a target="_blank" href="https://github.com/Ch0up">
+            <a target="_blank" href="https://github.com/Ch0up" title="github">
                 <i class="transfo fab fa-github-square"></i>
             </a>
         </div>

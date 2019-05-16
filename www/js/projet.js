@@ -84,6 +84,6 @@ $('.linksBottom a').on('click', onClickGoArticle);
 
 function onClickGoArticle() {
     $('body,html').animate({
-        scrollTop: $(this.hash).offset().top
+        scrollTop: $(this.hash).offset().top - 40
     }, 1000);
 }

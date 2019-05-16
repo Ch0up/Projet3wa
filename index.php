@@ -3,6 +3,7 @@
 use \JKosacki\Autoloader;
 use \JKosacki\App;
 use \JKosacki\Form;
+use \JKosacki\Session;
 
 require_once 'classes/Autoloader.php';
 Autoloader::register();
@@ -28,7 +29,7 @@ App::getAuth()->restrict();
     <header>
         <nav>
             <div class="logo">
-                <h4>Joris Kosacki</h4>
+                <a href="#home"><h4>Joris Kosacki</h4></a>
             </div>
             <ul class="nav-links">
                 <li><a href="#about" class="scroll">À Propos</a></li>
@@ -37,7 +38,7 @@ App::getAuth()->restrict();
                 <li><a href="#contact" class="scroll">Contact</a></li>
                 <li>
                     <?php if (isset($_SESSION['auth'])): ?>
-                        <a href="account/logout.php" title="See-you-soon"><i class="fas fa-door-open"></i></a>
+                        <a href="account/logout" title="See-you-soon"><i class="fas fa-door-open"></i></a>
                     <?php endif; ?>
                 </li>
             </ul>
@@ -57,13 +58,21 @@ App::getAuth()->restrict();
             <a href="#about"><span></span></a>
         </div>
     </header>
+    <div class="loader">
+        <img src="www/images/image.svg" alt="Loading..."/>
+    </div>
     <main class="content">
         <article class="about" id="about">
             <h2>À Propos</h2>
             <div class="container-about clearfix">
                 <img src="www/images/portrait.jpg" alt="portrait" title="portrait" height="300" width="300"
                      class="imgResponsive">
-                <p> Je m'appelle Joris Kosacki, je suis développeur web</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt, dolore facilis
+                    laborum
+                    nobis
+                    nulla quam sit sunt unde voluptas? Alias aperiam eligendi optio pariatur quas, quisquam soluta
+                    veritatis
+                    voluptatem</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt, dolore facilis laborum
                     nobis
                     nulla quam sit sunt unde voluptas? Alias aperiam eligendi optio pariatur quas, quisquam soluta
@@ -116,7 +125,7 @@ App::getAuth()->restrict();
                 </div>
                 <div class="description-skills">
                     <a target="_blank"
-                       href="https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript">
+                       href="https://developer.mozilla.org/fr/docs/Web/JavaScript">
                         <img src="www/images/js.png" alt="js" title="js" width="400"
                              height="400"
                              class="logoImage transfo">
@@ -133,14 +142,14 @@ App::getAuth()->restrict();
                 </div>
                 <div class="description-skills">
                     <a target="_blank"
-                       href="https://openclassrooms.com/courses/un-site-web-dynamique-avec-jquery/le-fonctionnement-de-ajax">
+                       href="https://developer.mozilla.org/fr/docs/Web/Guide/AJAX">
                         <img src="www/images/ajax.jpg" alt="ajax" title="ajax" width="458" height="458"
                              class="logoImage transfo">
                     </a>
                     <p> – Ajax : Echange de données en JavaScript.</p>
                 </div>
                 <div class="description-skills">
-                    <a target="_blank" href="http://sql.sh/">
+                    <a target="_blank" href="https://sql.sh/">
                         <img src="www/images/mysql.png" alt="mysql" title="mysql" width="512" height="512"
                              class="logoImage transfo">
                     </a>
@@ -247,16 +256,19 @@ App::getAuth()->restrict();
         </article>
         <article class="contact" id="contact">
             <h2>Contact</h2>
-
-            <?php if (array_key_exists('errors', $_SESSION)): ?>
-                <div class="alert-danger">
-                    <?= implode('<br>', $_SESSION['errors']); ?>
-                </div>
+            <?php if (Session::getInstance()->hasFlashes()): ?>
+                <?php foreach (Session::getInstance()->getFlashes() as $type => $message): ?>
+                    <div class="alert-<?= $type; ?>">
+                        <?= $message; ?>
+                    </div>
+                <?php endforeach; ?>
             <?php endif; ?>
-            <?php if (array_key_exists('success', $_SESSION)): ?>
-                <div class="alert-success">
-                    Votre message a bien été envoyé
-                </div>
+            <?php if (Session::getInstance()->hasFlashes()): ?>
+                <?php foreach (Session::getInstance()->getFlashes() as $type => $message): ?>
+                    <div class="alert-<?= $type; ?>">
+                        <?= $message; ?>
+                    </div>
+                <?php endforeach; ?>
             <?php endif; ?>
 
             <form action="contactForm/contact-form.php" method="POST" id="contact-form">

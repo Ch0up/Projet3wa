@@ -81,7 +81,7 @@ class Validator
     {
         $validator = "validate_$rule";
         if (!$this->$validator($name, $options)) {
-            $this->errors[$name] = "Le champs $name n'a été rempli correctement";
+            $this->errors[$name] = "Le champs $name n'a pas été rempli correctement";
         }
     }
 

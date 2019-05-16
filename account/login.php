@@ -10,14 +10,13 @@ $auth = App::getAuth();
 $db = App::getDatabase();
 $auth->connectFromCookie($db);
 if ($auth->user()) {
-    App::redirect('../index.php');
+    App::redirect('../');
 }
 if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) {
     $user = $auth->login($db, $_POST['username'], $_POST['password'], isset($_POST['remember']));
     $session = Session::getInstance();
     if ($user) {
-        $session->setFlash('success', "Vous êtes bien connecté");
-        App::redirect('../index.php');
+        App::redirect('../');
     } else {
         $session->setFlash('danger', "Identifiant ou mot de passe incorrecte");
     }
@@ -43,8 +42,8 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
                 <label for="remember-me">Se souvenir de moi</label>
             </div>
             <button type="submit" id="login-button">Se connecter</button>
-            <p class="message">Pas encore enregistré ? <a href="register.php">Crée un compte</a></p>
-            <p class="message"><a href="forget.php">(J'ai oublié mon mot de passe)</a></p>
+            <p class="message">Pas encore enregistré ? <a href="register">Crée un compte</a></p>
+            <p class="message"><a href="forget">(J'ai oublié mon mot de passe)</a></p>
         </form>
     </div>
     <ul class="bg-bubbles">

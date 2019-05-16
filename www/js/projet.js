@@ -1,5 +1,11 @@
 'use strict';
 
+// pre loader
+window.addEventListener("load", () => {
+    const loader = document.querySelector('.loader');
+    loader.className += " hidden"; // class "loader hidden"
+});
+
 // Fonction pour ouvrir le menu responsive
 function navSlide() {
     const burger = document.querySelector('.nav-burger');

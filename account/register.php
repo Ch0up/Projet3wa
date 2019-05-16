@@ -31,7 +31,7 @@ if (!empty($_POST)) {
         App::getAuth()->register($db, $_POST['username'], $_POST['password'], $_POST['email']);
         Session::getInstance()->setFlash('success',
             "Un email de confirmation vous a été envoyé pour valider votre compte");
-        App::redirect('login.php');
+        App::redirect('login');
     } else {
         $errors = $validator->getErrors();
     }
@@ -60,7 +60,7 @@ if (!empty($_POST)) {
             <label for="email"></label>
             <input id="email" type="email" name="email" placeholder="E-mail" autocomplete="off" required/>
             <button type="submit">Créer</button>
-            <p class="message">Déjà enregistré ? <a href="login.php">Se connecter</a></p>
+            <p class="message">Déjà enregistré ? <a href="login">Se connecter</a></p>
         </form>
     </div>
     <ul class="bg-bubbles">

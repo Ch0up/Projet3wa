@@ -29,7 +29,7 @@ class Authentification
         $user_id = $db->lastInsertId();
         $headers = 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
         mail($email, 'Confirmation de votre compte',
-            "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttp://localhost/ProjetPersoDev/projet3wa/Projet/application/account/confirm.php?id=$user_id&token=$token",
+            "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttps://www.joriskosacki.fr/projet/account/confirm?id=$user_id&token=$token",
             $headers);
     }
 
@@ -49,7 +49,7 @@ class Authentification
     {
         if (!$this->session->read('auth')) {
             $this->session->setFlash('danger', "Vous n'avez pas le droit d'accéder à cette page");
-            header('Location: account/login.php');
+            header('Location: account/login');
             exit();
         }
     }
@@ -126,7 +126,7 @@ class Authentification
             $db->query('UPDATE users SET reset_token = ?, reset_at = NOW() WHERE id = ?', [$reset_token, $user->id]);
             $headers = 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
             mail($_POST['email'], 'Réinitialisation de votre mot de passe',
-                "Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien\n\nhttp://localhost/ProjetPersoDev/projet3wa/Projet/application/account/reset.php?id={$user->id}&token=$reset_token",
+                "Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien\n\nhttps://www.joriskosacki.fr/projet/account/reset?id={$user->id}&token=$reset_token",
                 $headers);
             return $user;
         }

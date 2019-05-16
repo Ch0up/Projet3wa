@@ -22,7 +22,7 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
                     [$password, $_GET['id']]);
                 $auth->connect($user);
                 $session->setFlash('success', "Votre mot de passe a bien été modifié");
-                App::redirect('login.php');
+                App::redirect('login');
             }
             else {
                 $session->setFlash('danger', "Les mots de passe ne correspondent pas");
@@ -30,10 +30,10 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
         }
     } else {
         Session::getInstance()->setFlash('danger', "Ce token n'est pas valide");
-        App::redirect('login.php');
+        App::redirect('login');
     }
 } else {
-    App::redirect('login.php');
+    App::redirect('login');
 }
 ?>
 <?php require 'loginHome.php'; ?>

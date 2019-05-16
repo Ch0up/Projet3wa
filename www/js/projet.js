@@ -73,7 +73,7 @@ $(window).scroll(() => {
 $(document).ready(() => {
     $('.arrowScrollBottom').click(() => {
         $('html, body').animate({
-            scrollTop: $('#about').offset().top
+            scrollTop: $('#about').offset().top - 40
         }, 1000)
     })
 });

@@ -44,7 +44,7 @@ if (!empty($_POST)) {
         <h2>S'enregister</h2>
         <?php if (!empty($errors)): ?>
             <?php foreach ($errors as $error): ?>
-                <div class="alert-danger">
+                <div>
                     <?= $error; ?>
                 </div>
             <?php endforeach; ?>

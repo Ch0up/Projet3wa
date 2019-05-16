@@ -41,13 +41,12 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
 <div class="wrapper">
     <div class="container">
         <h2>Réinitialisation</h2>
-        <?php if (isset($_SESSION['flash'])): ?>
-            <?php foreach ($_SESSION['flash'] as $type => $message): ?>
+        <?php if (Session::getInstance()->hasFlashes()): ?>
+            <?php foreach (Session::getInstance()->getFlashes() as $type => $message): ?>
                 <div class="alert-<?= $type; ?>">
                     <?= $message; ?>
                 </div>
             <?php endforeach; ?>
-            <?php unset($_SESSION['flash']); ?>
         <?php endif; ?>
         <form action="" method="POST" id="login-form">
             <input type="password" name="password" placeholder="Mot de passe" required/>

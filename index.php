@@ -49,7 +49,7 @@ App::getAuth()->restrict();
             </div>
         </nav>
         <div class="header-content">
-            <h1>Bonjour <?= $_SESSION['auth']->username; ?></h1>
+            <h1>Bonjour <?= App::getAuth()->user()->username; ?></h1>
         </div>
         <div class="scrollToTop">
             <i class="fa fa-chevron-circle-up"></i>
@@ -319,7 +319,7 @@ App::getAuth()->restrict();
     </html>
 
 <?php
-unset($_SESSION['inputs']);
-unset($_SESSION['success']);
-unset($_SESSION['errors']);
+Session::getInstance()->delete('inputs');
+Session::getInstance()->delete('success');
+Session::getInstance()->delete('errors');
 ?>

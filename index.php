@@ -13,10 +13,13 @@ App::getAuth()->restrict();
     <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Mon Projet</title>
+        <title>Joris Kosacki - Portfolio</title>
+        <meta name="language" content="fr">
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Joris Kosacki - Je suis Développeur web fullStack à Grenoble.">
+        <meta name="author" content="Joriskosacki.fr">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
               integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
@@ -29,7 +32,7 @@ App::getAuth()->restrict();
     <header>
         <nav>
             <div class="logo">
-                <a href="#home" title="Home"><h4>Joris Kosacki</h4></a>
+                <a href="#home" title="Home"><span>Joris Kosacki</span></a>
             </div>
             <ul class="nav-links">
                 <li><a href="#about" class="scroll" title="À Propos">À Propos</a></li>
@@ -326,7 +329,7 @@ App::getAuth()->restrict();
             <a href="#contact" title="Contact">Contact</a>
         </div>
         <div class="social-network-icons">
-            <a target="_blank" href="https://www.facebook.com/joris.kosacki" title="facebook">
+            <a target="_blank" href="https://www.facebook.com/" title="facebook">
                 <i class="transfo fab fa-facebook-square"></i>
             </a>
             <a target="_blank" href="https://www.linkedin.com/in/joris-kosacki-669b1515b/" title="linkedin">

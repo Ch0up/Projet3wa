@@ -362,7 +362,7 @@ nav {
 
 .about h2:hover {
     transition: all 0.5s;
-    box-shadow: 0 1px 10px rgba(24, 90, 157, 0.5);
+    box-shadow: 0 1px 10px rgba(255, 255, 255, 0.5);
 }
 
 .container-about {
@@ -370,6 +370,7 @@ nav {
 }
 
 .container-about img {
+    margin-bottom: 15px;
     float: right;
     border-radius: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

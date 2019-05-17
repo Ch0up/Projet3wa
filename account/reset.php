@@ -20,7 +20,6 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
                 $password = $auth->hashPassword($_POST['password']);
                 $db->query('UPDATE users SET password = ?, reset_at = NULL, reset_token = NULL WHERE id = ?',
                     [$password, $_GET['id']]);
-                $auth->connect($user);
                 $session->setFlash('success', "Votre mot de passe a bien été modifié");
                 App::redirect('login');
             }

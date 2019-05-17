@@ -27,7 +27,9 @@ class Authentification
             $token
         ]);
         $user_id = $db->lastInsertId();
-        $headers = 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+        $headers .= 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
         mail($email, 'Confirmation de votre compte',
             "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttps://www.joriskosacki.fr/projet/account/confirm?id=$user_id&token=$token",
             $headers);
@@ -124,7 +126,9 @@ class Authentification
         if ($user) {
             $reset_token = Str::random(60);
             $db->query('UPDATE users SET reset_token = ?, reset_at = NOW() WHERE id = ?', [$reset_token, $user->id]);
-            $headers = 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
+            $headers  = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+            $headers .= 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
             mail($_POST['email'], 'Réinitialisation de votre mot de passe',
                 "Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien\n\nhttps://www.joriskosacki.fr/projet/account/reset?id={$user->id}&token=$reset_token",
                 $headers);

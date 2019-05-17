@@ -26,7 +26,9 @@ if (!empty($errors)) {
     header('Location: ../#contact');
 } else {
     $session->setFlash('success', "Votre message a bien été envoyé");
-    $headers = 'FROM: ' . $_POST['email'];
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+    $headers .= 'FROM: ' . $_POST['email'];
     mail('joris.kosacki@hotmail.fr', 'Message de : ' . $_POST['nom'] . ' ' . $_POST['prénom'], $_POST['message'],
         $headers);
     header('Location: ../#contact');

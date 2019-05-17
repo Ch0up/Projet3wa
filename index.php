@@ -304,7 +304,7 @@ App::getAuth()->restrict();
                 <?php endforeach; ?>
             <?php endif; ?>
 
-            <form action="contactForm/contact-form.php" method="POST" id="contact-form">
+            <form action="contactForm/contact-form" method="POST" id="contact-form">
                 <?php $form = new Form(isset($_SESSION['inputs']) ? $_SESSION['inputs'] : []); ?>
                 <?= $form->text('prénom', 'Prénom'); ?>
                 <br>

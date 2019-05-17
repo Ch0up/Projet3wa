@@ -16,15 +16,16 @@ if (!empty($_POST)) {
     $db = App::getDatabase();
     $validator = new Validator($_POST);
     $validator->isAlpha('username', "Votre pseudo n'est pas valide");
+
     if ($validator->isValid()) {
         $validator->isUniq('username', $db, 'users', "Ce pseudo est déjà pris");
     }
     $validator->isEmail('email', "Votre email n'est pas valide");
+
     if ($validator->isValid()) {
         $validator->isUniq('email', $db, 'users', "Cet email est déjà utilisé pour un autre compte");
     }
-    $validator->isConfirmed('password', "Vous devez rentrer un mot de passe valide");
-
+    $validator->isConfirmed('password', "Les mots de passe ne correspondent pas");
 
     if ($validator->isValid()) {
 
@@ -49,14 +50,14 @@ if (!empty($_POST)) {
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
-        <form action="register.php" method="POST" id="register-form">
+        <form action="" method="POST" id="register-form">
             <label for="username"></label>
-            <input id="username" type="text" name="username" placeholder="Pseudo" autocomplete="off" required/>
+            <input id="username" type="text" name="username" placeholder="Pseudo" autocomplete="off" minlength="3" required/>
             <label for="password"></label>
-            <input id="password" type="password" name="password" placeholder="Mot de passe" required/>
+            <input id="password" type="password" name="password" placeholder="Mot de passe" minlength="4" required/>
             <label for="password_confirm"></label>
             <input id="password_confirm" type="password" name="password_confirm"
-                   placeholder="Confirmation du mot de passe" required/>
+                   placeholder="Confirmation du mot de passe" minlength="4" required/>
             <label for="email"></label>
             <input id="email" type="email" name="email" placeholder="E-mail" autocomplete="off" required/>
             <button type="submit">Créer</button>

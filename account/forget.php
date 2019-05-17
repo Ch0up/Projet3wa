@@ -35,6 +35,7 @@ if (!empty($_POST) && !empty($_POST['email'])) {
         <form action="" method="POST" id="login-form">
             <input type="email" name="email" placeholder="Email" required/>
             <button type="submit">Envoyer</button>
+            <p class="message"><a href="login">(J'ai changé d'avis)</a></p>
         </form>
     </div>
     <ul class="bg-bubbles">

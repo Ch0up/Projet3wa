@@ -1,9 +1,13 @@
 'use strict';
+// Petit message concernant le code, j'ai volontairement écrit
+// du code en javascript natif et en jquery pour vous montrez
+// que je savais faire les deux
 
-// pre loader
+
+// Fonction pour afficher le loader lors d'un chargement
 window.addEventListener("load", () => {
     const loader = document.querySelector('.loader');
-    loader.className += " hidden"; // class "loader hidden"
+    loader.className += " hidden"; // classe "loader hidden"
 });
 
 // Fonction pour ouvrir le menu responsive
@@ -14,12 +18,12 @@ function navSlide() {
     let sideBarOpened = false;
 
     burger.addEventListener('click', () => {
-        // Toggle nav
+        // Afficher ou cacher le nav
         nav.classList.toggle('nav-active');
-        // Burger animation
+        // Animation du burger menu
         burger.classList.toggle('toggle');
 
-        // Animate links
+        // Liens qui apparaissent
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = '';
@@ -29,7 +33,7 @@ function navSlide() {
         });
         sideBarOpened = true;
 
-        // Close nav side
+        // Fermer la sidebar quand on clique sur un lien
         nav.addEventListener('click', () => {
             if (sideBarOpened) {
                 nav.classList.toggle('nav-active');
@@ -50,6 +54,7 @@ function navSlide() {
 navSlide();
 
 // Fonction pour retourner en haut de le page quand on clique sur la flêche
+
 $('.scrollToTop').on('click', onClickToGoTop);
 $('.logo').on('click', onClickToGoTop);
 
@@ -61,6 +66,7 @@ function onClickToGoTop() {
 }
 
 // faire apparaitre le bouton quand on scroll pour retourner en haut de la page
+
 $(window).scroll(() => {
     let posScroll = $(document).scrollTop();
     if (posScroll >= 550)
@@ -70,6 +76,7 @@ $(window).scroll(() => {
 });
 
 // Fonction pour aller à la premier section
+
 $(document).ready(() => {
     $('.arrowScrollBottom').click(() => {
         $('html, body').animate({
@@ -78,7 +85,8 @@ $(document).ready(() => {
     })
 });
 
-// Smooth scrolling quand on clique sur les link du nav ou du footer
+// Pour faire un smooth scroll quand on clique sur les link du nav ou du footer
+
 $('.scroll').on('click', onClickGoArticle);
 $('.linksBottom a').on('click', onClickGoArticle);
 

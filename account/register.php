@@ -77,3 +77,5 @@ if (!empty($_POST)) {
         <li></li>
     </ul>
 </div>
+
+<?php require 'loginHomeFooter.php'; ?>

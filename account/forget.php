@@ -51,3 +51,5 @@ if (!empty($_POST) && !empty($_POST['email'])) {
         <li></li>
     </ul>
 </div>
+
+<?php require 'loginHomeFooter.php'; ?>

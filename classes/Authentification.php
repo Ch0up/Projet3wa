@@ -31,7 +31,7 @@ class Authentification
         $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
         $headers .= 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
         mail($email, 'Confirmation de votre compte',
-            "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttps://www.joriskosacki.fr/projet/account/confirm?id=$user_id&token=$token",
+            "Afin de valider votre compte merci de cliquer sur ce lien\n\nhttps://www.joriskosacki.fr/portfolio/account/confirm?id=$user_id&token=$token",
             $headers);
     }
 
@@ -130,7 +130,7 @@ class Authentification
             $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
             $headers .= 'FROM: joriskosacki.fr <joris.kosacki@hotmail.fr>';
             mail($_POST['email'], 'Réinitialisation de votre mot de passe',
-                "Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien\n\nhttps://www.joriskosacki.fr/projet/account/reset?id={$user->id}&token=$reset_token",
+                "Afin de réinitialiser votre mot de passe merci de cliquer sur ce lien\n\nhttps://www.joriskosacki.fr/portfolio/account/reset?id={$user->id}&token=$reset_token",
                 $headers);
             return $user;
         }

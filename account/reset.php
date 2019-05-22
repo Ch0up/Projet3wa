@@ -66,3 +66,5 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
         <li></li>
     </ul>
 </div>
+
+<?php require 'loginHomeFooter.php'; ?>

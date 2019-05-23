@@ -53,6 +53,31 @@ function navSlide() {
 
 navSlide();
 
+// Fonction pour faire apparaitre les images quand on scroll
+const sliderImages = document.querySelectorAll('.slide-in');
+
+function checkSlide(){
+    // Boucle pour chaque image
+    sliderImages.forEach(sliderImage => {
+        // On regard où l'on est par rapport au bas de la page et on divise pour être au centre de la page
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height/2;
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        // Si l'image a été passée ou pas
+        const isNotScrolledPast = window.scrollY < imageBottom;
+        if(isHalfShown && isNotScrolledPast){
+            sliderImage.classList.add('active');
+        } else {
+            sliderImage.classList.remove('active');
+        }
+    });
+
+}
+
+window.addEventListener('scroll', checkSlide);
+window.addEventListener('load', checkSlide);
+
+
 // Fonction pour retourner en haut de le page quand on clique sur la flêche
 
 $('.scrollToTop').on('click', onClickToGoTop);

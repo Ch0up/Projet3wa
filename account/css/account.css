@@ -75,9 +75,25 @@ body :-ms-input-placeholder {
 
 .container h2 {
     font-size: 30px;
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
     font-weight: 200;
+}
+
+.typing::after {
+    content: "";
+    margin-left: 5px;
+    position: absolute;
+    border-right: 2px solid white;
+    height: 30px;
+    animation: blink 1.5s infinite ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 form {
@@ -152,7 +168,7 @@ form button:hover {
     width: 5%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 374px) {
     .form-check-input {
         margin-left: -2.75rem;
     }

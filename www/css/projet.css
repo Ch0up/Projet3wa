@@ -336,6 +336,32 @@ nav {
     margin: 0 auto;
 }
 
+/****/
+/****/
+/****/
+/**** PARTIE POUR LE SLIDE IN //
+/****/
+/****/
+/****/
+
+.slide-in {
+    opacity: 0;
+    transition: all .5s;
+}
+
+.align-left.slide-in {
+    transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+    transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
+
 /********/
 /********/
 /***************** ABOUT */
@@ -756,13 +782,13 @@ footer p:last-of-type {
         padding: 10px;
     }
 
-
     .skills .description-skills {
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
     }
 }
+
 @media (max-width: 600px) {
     .creation .description-creation {
         display: flex;

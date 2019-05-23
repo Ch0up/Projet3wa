@@ -26,7 +26,7 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
 
 <div class="wrapper">
     <div class="container">
-        <h2>Connexion</h2>
+        <h2 class="typing"></h2>
         <?php if (Session::getInstance()->hasFlashes()): ?>
             <?php foreach (Session::getInstance()->getFlashes() as $type => $message): ?>
                 <div class="alert-<?= $type; ?>">

@@ -69,7 +69,7 @@ App::getAuth()->restrict();
             <h2>À Propos</h2>
             <div class="container-about clearfix">
                 <img src="www/images/portrait.jpg" alt="portrait" title="portrait" height="300" width="300"
-                     class="imgResponsive">
+                     class="imgResponsive align-right slide-in">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt, dolore facilis
                     laborum
                     nobis
@@ -106,7 +106,7 @@ App::getAuth()->restrict();
                     <a target="_blank" href="https://htmlreference.io/">
                         <img src="www/images/html5.png" alt="html5" title="html5" width="512"
                              height="512"
-                             class="logoImage transfo">
+                             class="logoImage transfo align-left slide-in">
                     </a>
                     <p> – HTML5 : Langage universel du Web.</p>
                 </div>
@@ -114,7 +114,7 @@ App::getAuth()->restrict();
                     <a target="_blank" href="https://css-tricks.com/">
                         <img src="www/images/css3.png" alt="css3" title="css3" width="730"
                              height="833"
-                             class="logoImage transfo">
+                             class="logoImage transfo align-right slide-in">
                     </a>
                     <p> – CSS3 : Apparence des interfaces (couleur, typographie, structure…).</p>
                 </div>
@@ -122,7 +122,7 @@ App::getAuth()->restrict();
                     <a target="_blank" href="http://www.php.net/">
                         <img src="www/images/php.png" alt="php" title="php" width="1280"
                              height="691"
-                             class="logoImage transfo">
+                             class="logoImage transfo align-left slide-in">
                     </a>
                     <p> – PHP7 : Gestion des fonctionnalités (espace privé, formulaire, API…).</p>
                 </div>
@@ -131,7 +131,7 @@ App::getAuth()->restrict();
                        href="https://developer.mozilla.org/fr/docs/Web/JavaScript">
                         <img src="www/images/js.png" alt="js" title="js" width="400"
                              height="400"
-                             class="logoImage transfo">
+                             class="logoImage transfo align-right slide-in ">
                     </a>
                     <p> – JavaScript : Dynamisation des pages, micro-interactions & animations.</p>
                 </div>
@@ -139,7 +139,7 @@ App::getAuth()->restrict();
                     <a target="_blank" href="https://jquery.com/">
                         <img src="www/images/jquery.jpg" alt="jquery" title="jquery" width="458"
                              height="458"
-                             class="logoImage transfo">
+                             class="logoImage transfo align-left slide-in">
                     </a>
                     <p> – jQuery : Bibliothèque JavaScript de référence.</p>
                 </div>
@@ -147,14 +147,14 @@ App::getAuth()->restrict();
                     <a target="_blank"
                        href="https://developer.mozilla.org/fr/docs/Web/Guide/AJAX">
                         <img src="www/images/ajax.jpg" alt="ajax" title="ajax" width="458" height="458"
-                             class="logoImage transfo">
+                             class="logoImage transfo align-right slide-in ">
                     </a>
                     <p> – Ajax : Echange de données en JavaScript.</p>
                 </div>
                 <div class="description-skills">
                     <a target="_blank" href="https://sql.sh/">
                         <img src="www/images/mysql.png" alt="mysql" title="mysql" width="512" height="512"
-                             class="logoImage transfo">
+                             class="logoImage transfo align-left slide-in">
                     </a>
                     <p> – MySQL : Stockage & gestion des données.</p>
                 </div>
@@ -162,21 +162,21 @@ App::getAuth()->restrict();
                     <a target="_blank" href="https://getbootstrap.com/">
                         <img src="www/images/bootstrap.png" alt="bootstrap" title="bootstrap"
                              width="705" height="397"
-                             class="logoImage transfo bootstrap">
+                             class="logoImage transfo bootstrap align-right slide-in">
                     </a>
                     <p> – Bootstrap : Framework CSS et JavaScript pour site responsive.</p>
                 </div>
                 <div class="description-skills">
                     <a target="_blank" href="https://vuejs.org">
                         <img src="www/images/vuejs.png" alt="vuejs" title="vuejs" width="420" height="420"
-                             class="logoImage transfo"></a>
+                             class="logoImage transfo align-left slide-in"></a>
                     <p> – VueJS : Framework JavaScript open-source.</p>
                 </div>
                 <div class="description-skills">
                     <a target="_blank" href="https://nodejs.org">
                         <img src="www/images/nodejs.png" alt="nodejs" title="nodejs" width="800"
                              height="800"
-                             class="logoImage transfo"></a>
+                             class="logoImage transfo align-right slide-in"></a>
                     <p> – NodeJS : Plateforme logicielle libre et événementielle en JavaScript.</p>
                 </div>
             </div>
@@ -186,10 +186,11 @@ App::getAuth()->restrict();
             <div class="rectangle-orange">
                 <div class="description-creation description-creation-odd clearfix">
                     <h3>Cup of Tea :</h3>
-                    <a href="www/images/cupoftea.jpg" data-lightbox="myproject" data-title="cupoftea"><img
+                    <a href="www/images/cupoftea.jpg" data-lightbox="myproject" data-title="cupoftea">
+                        <img
                                 src="www/images/cupoftea-small.jpg" title="cupoftea" alt="cupoftea"
                                 width="150"
-                                height="150"></a>
+                                height="150" class="align-right slide-in"></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid amet at aut eius est
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
@@ -206,7 +207,7 @@ App::getAuth()->restrict();
                     <a href="www/images/johndoe.jpg" data-lightbox="myproject" data-title="johnDoe"><img
                                 src="www/images/johndoe-small.jpg" title="johndoe" alt="johndoe"
                                 height="150"
-                                width="150"></a>
+                                width="150" class="align-left slide-in"></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid amet at aut eius est
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
@@ -223,7 +224,7 @@ App::getAuth()->restrict();
                     <a href="www/images/creasoul.png" data-lightbox="myproject" data-title="creaSoul"><img
                                 src="www/images/creasoul-small.png" title="creasoul" alt="creasoul"
                                 width="150"
-                                height="150"></a>
+                                height="150" class="align-right slide-in"></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid amet at aut eius est
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
@@ -240,7 +241,7 @@ App::getAuth()->restrict();
                     <a href="www/images/wolfgang.png" data-lightbox="myproject" data-title="wolfgang"><img
                                 src="www/images/wolfgang-small.png" title="wolfgang" alt="wolfgang"
                                 width="150"
-                                height="150"></a>
+                                height="150" class="align-left slide-in"></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid amet at aut eius est
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
@@ -257,7 +258,7 @@ App::getAuth()->restrict();
                     <a href="www/images/mindgeek.jpg" data-lightbox="myproject" data-title="mindgeek"><img
                                 src="www/images/mindgeek-small.jpg" title="mindgeek" alt="mindgeek"
                                 width="150"
-                                height="150"></a>
+                                height="150" class="align-right slide-in"></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquid amet at aut eius est
                         explicabo facere, illum iste nobis similique suscipit voluptate? Enim molestias nulla suscipit
                         vero? Consequatur, vero?
@@ -269,7 +270,7 @@ App::getAuth()->restrict();
                        data-title="restaurant"><img
                                 src="www/images/restaurant-small.jpg" title="restaurant" alt="restaurant"
                                 width="150"
-                                height="150"></a>
+                                height="150" class="align-left slide-in"></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet, assumenda culpa
                         deleniti, eaque enim facere facilis inventore laboriosam nemo obcaecati perspiciatis quasi, quod
                         sed sit soluta sunt voluptatibus?</p>
@@ -280,7 +281,7 @@ App::getAuth()->restrict();
                        data-title="ardoise"><img
                                 src="www/images/ardoise-small.jpg" title="ardoise" alt="ardoise"
                                 width="150"
-                                height="150"></a>
+                                height="150" class="align-right slide-in"></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ducimus hic id natus nisi nobis
                         obcaecati, quaerat! Accusantium aperiam assumenda, dolore eos ipsa pariatur quia repudiandae
                         similique voluptas voluptate voluptatem!</p>
@@ -337,9 +338,6 @@ App::getAuth()->restrict();
             </a>
             <a target="_blank" href="https://twitter.com/" title="twitter">
                 <i class="transfo fab fa-twitter-square"></i>
-            </a>
-            <a target="_blank" href="https://github.com/Ch0up" title="github">
-                <i class="transfo fab fa-github-square"></i>
             </a>
         </div>
         <p>Portfolio développeur web full-stack © 2018 Joris Kosacki - mentions légales</p>

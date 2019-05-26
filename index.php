@@ -101,84 +101,82 @@ App::getAuth()->restrict();
         </article>
         <article class="skills clearfix" id="skills">
             <h2>Compétences</h2>
-            <div class="clearfix">
-                <div class="description-skills">
-                    <a target="_blank" href="https://htmlreference.io/">
-                        <img src="www/images/html5.png" alt="html5" title="html5" width="512"
-                             height="512"
-                             class="logoImage transfo align-left slide-in">
-                    </a>
-                    <p> – HTML5 : Langage universel du Web.</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank" href="https://css-tricks.com/">
-                        <img src="www/images/css3.png" alt="css3" title="css3" width="730"
-                             height="833"
-                             class="logoImage transfo align-right slide-in">
-                    </a>
-                    <p> – CSS3 : Apparence des interfaces (couleur, typographie, structure…).</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank" href="http://www.php.net/">
-                        <img src="www/images/php.png" alt="php" title="php" width="1280"
-                             height="691"
-                             class="logoImage transfo align-left slide-in">
-                    </a>
-                    <p> – PHP7 : Gestion des fonctionnalités (espace privé, formulaire, API…).</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank"
-                       href="https://developer.mozilla.org/fr/docs/Web/JavaScript">
-                        <img src="www/images/js.png" alt="js" title="js" width="400"
-                             height="400"
-                             class="logoImage transfo align-right slide-in ">
-                    </a>
-                    <p> – JavaScript : Dynamisation des pages, micro-interactions & animations.</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank" href="https://jquery.com/">
-                        <img src="www/images/jquery.jpg" alt="jquery" title="jquery" width="458"
-                             height="458"
-                             class="logoImage transfo align-left slide-in">
-                    </a>
-                    <p> – jQuery : Bibliothèque JavaScript de référence.</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank"
-                       href="https://developer.mozilla.org/fr/docs/Web/Guide/AJAX">
-                        <img src="www/images/ajax.jpg" alt="ajax" title="ajax" width="458" height="458"
-                             class="logoImage transfo align-right slide-in ">
-                    </a>
-                    <p> – Ajax : Echange de données en JavaScript.</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank" href="https://sql.sh/">
-                        <img src="www/images/mysql.png" alt="mysql" title="mysql" width="512" height="512"
-                             class="logoImage transfo align-left slide-in">
-                    </a>
-                    <p> – MySQL : Stockage & gestion des données.</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank" href="https://getbootstrap.com/">
-                        <img src="www/images/bootstrap.png" alt="bootstrap" title="bootstrap"
-                             width="705" height="397"
-                             class="logoImage transfo bootstrap align-right slide-in">
-                    </a>
-                    <p> – Bootstrap : Framework CSS et JavaScript pour site responsive.</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank" href="https://vuejs.org">
-                        <img src="www/images/vuejs.png" alt="vuejs" title="vuejs" width="420" height="420"
-                             class="logoImage transfo align-left slide-in"></a>
-                    <p> – VueJS : Framework JavaScript open-source.</p>
-                </div>
-                <div class="description-skills">
-                    <a target="_blank" href="https://nodejs.org">
-                        <img src="www/images/nodejs.png" alt="nodejs" title="nodejs" width="800"
-                             height="800"
-                             class="logoImage transfo align-right slide-in"></a>
-                    <p> – NodeJS : Plateforme logicielle libre et événementielle en JavaScript.</p>
-                </div>
+            <div class="description-skills">
+                <a target="_blank" href="https://htmlreference.io/">
+                    <img src="www/images/html5.png" alt="html5" title="html5" width="512"
+                         height="512"
+                         class="logoImage transfo align-left slide-in">
+                </a>
+                <p> – HTML5 : Langage universel du Web.</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank" href="https://css-tricks.com/">
+                    <img src="www/images/css3.png" alt="css3" title="css3" width="730"
+                         height="833"
+                         class="logoImage transfo align-right slide-in">
+                </a>
+                <p> – CSS3 : Apparence des interfaces (couleur, typographie, structure…).</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank" href="http://www.php.net/">
+                    <img src="www/images/php.png" alt="php" title="php" width="1280"
+                         height="691"
+                         class="logoImage transfo align-left slide-in">
+                </a>
+                <p> – PHP7 : Gestion des fonctionnalités (espace privé, formulaire, API…).</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank"
+                   href="https://developer.mozilla.org/fr/docs/Web/JavaScript">
+                    <img src="www/images/js.png" alt="js" title="js" width="400"
+                         height="400"
+                         class="logoImage transfo align-right slide-in ">
+                </a>
+                <p> – JavaScript : Dynamisation des pages, micro-interactions & animations.</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank" href="https://jquery.com/">
+                    <img src="www/images/jquery.jpg" alt="jquery" title="jquery" width="458"
+                         height="458"
+                         class="logoImage transfo align-left slide-in">
+                </a>
+                <p> – jQuery : Bibliothèque JavaScript de référence.</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank"
+                   href="https://developer.mozilla.org/fr/docs/Web/Guide/AJAX">
+                    <img src="www/images/ajax.jpg" alt="ajax" title="ajax" width="458" height="458"
+                         class="logoImage transfo align-right slide-in ">
+                </a>
+                <p> – Ajax : Echange de données en JavaScript.</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank" href="https://sql.sh/">
+                    <img src="www/images/mysql.png" alt="mysql" title="mysql" width="512" height="512"
+                         class="logoImage transfo align-left slide-in">
+                </a>
+                <p> – MySQL : Stockage & gestion des données.</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank" href="https://getbootstrap.com/">
+                    <img src="www/images/bootstrap.png" alt="bootstrap" title="bootstrap"
+                         width="705" height="397"
+                         class="logoImage transfo bootstrap align-right slide-in">
+                </a>
+                <p> – Bootstrap : Framework CSS et JavaScript pour site responsive.</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank" href="https://vuejs.org">
+                    <img src="www/images/vuejs.png" alt="vuejs" title="vuejs" width="420" height="420"
+                         class="logoImage transfo align-left slide-in"></a>
+                <p> – VueJS : Framework JavaScript open-source.</p>
+            </div>
+            <div class="description-skills">
+                <a target="_blank" href="https://nodejs.org">
+                    <img src="www/images/nodejs.png" alt="nodejs" title="nodejs" width="800"
+                         height="800"
+                         class="logoImage transfo align-right slide-in"></a>
+                <p> – NodeJS : Plateforme logicielle libre et événementielle en JavaScript.</p>
             </div>
         </article>
         <article class="creation clearfix" id="creation">
@@ -318,7 +316,7 @@ App::getAuth()->restrict();
                 <input class="form-control submit" type="submit" name="submit" value="Envoyer">
             </form>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44994.272807750036!2d5.6804372855374785!3d45.184220669594296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478af48bd689be6f%3A0x618c10cd6e995398!2sGrenoble!5e0!3m2!1sfr!2sfr!4v1517930635052"
-                    class="maps"> Votre Navigateur ne peut pas afficher la carte
+                    class="maps"><p>Votre Navigateur ne peut pas afficher la carte</p>
             </iframe>
         </article>
     </main>

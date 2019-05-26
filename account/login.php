@@ -34,7 +34,7 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
-        <form action="" method="POST" id="login-form" class="form">
+        <form method="POST" id="login-form" class="form">
             <input type="text" name="username" placeholder="Pseudo ou email" autocomplete="off" required/>
             <input type="password" name="password" placeholder="Mot de passe" required/>
             <div class="form-check">

@@ -32,7 +32,7 @@ if (!empty($_POST) && !empty($_POST['email'])) {
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
-        <form action="" method="POST" id="login-form">
+        <form method="POST" id="login-form">
             <input type="email" name="email" placeholder="Email" required/>
             <button type="submit">Envoyer</button>
             <p class="message"><a href="login">(J'ai changé d'avis)</a></p>

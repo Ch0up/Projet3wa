@@ -50,7 +50,7 @@ if (!empty($_POST)) {
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
-        <form action="" method="POST" id="register-form">
+        <form method="POST" id="register-form">
             <label for="username"></label>
             <input id="username" type="text" name="username" placeholder="Pseudo" autocomplete="off" minlength="3" required/>
             <label for="password"></label>

@@ -47,7 +47,7 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
-        <form action="" method="POST" id="login-form">
+        <form method="POST" id="login-form">
             <input type="password" name="password" placeholder="Mot de passe" required/>
             <input type="password" name="password_confirm" placeholder="Confirmation du mot de passe" required/>
             <button type="submit">Réinitialiser</button>

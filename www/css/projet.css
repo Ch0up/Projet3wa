@@ -29,7 +29,7 @@ h2 {
 
 h3 {
     text-transform: uppercase;
-    width: -webkit-fill-available;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
